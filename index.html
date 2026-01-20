@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monedas Virtuales en Argentina | La Nueva Era Financiera</title>
+    <meta name="description" content="Descubre todo sobre las monedas virtuales en Argentina: regulación, beneficios, uso práctico y el futuro de las criptomonedas en el mercado argentino.">
+    <!-- 引入Tailwind CSS para estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- 配置Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#003366', // Azul nacional argentino
+                        secondary: '#74ACDF', // Azul claro
+                        accent: '#FFFF00', // Amarillo argentino
+                        dark: '#1A1A1A',
+                        light: '#F5F5F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            .bg-gradient-arg {
+                background: linear-gradient(135deg, #003366 0%, #74ACDF 100%);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-light">
+    <!-- Navegación -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <i class="fa-solid fa-coins text-primary text-2xl"></i>
+                <span class="font-bold text-xl text-primary">CryptoArgentina</span>
+            </a>
+            
+            <!-- Menú para escritorio -->
+            <nav class="hidden md:flex gap-8">
+                <a href="#inicio" class="font-medium hover:text-primary transition-colors">Inicio</a>
+                <a href="#beneficios" class="font-medium hover:text-primary transition-colors">Beneficios</a>
+                <a href="#regulacion" class="font-medium hover:text-primary transition-colors">Regulación</a>
+                <a href="#preguntas" class="font-medium hover:text-primary transition-colors">FAQ</a>
+                <a href="#contacto" class="font-medium hover:text-primary transition-colors">Contacto</a>
+            </nav>
+            
+            <!-- Botón de menú móvil -->
+            <button id="menuBtn" class="md:hidden text-primary text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Menú móvil -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white w-full shadow-lg">
+            <div class="container mx-auto px-4 py-3 flex flex-col gap-4">
+                <a href="#inicio" class="font-medium py-2 hover:text-primary transition-colors">Inicio</a>
+                <a href="#beneficios" class="font-medium py-2 hover:text-primary transition-colors">Beneficios</a>
+                <a href="#regulacion" class="font-medium py-2 hover:text-primary transition-colors">Regulación</a>
+                <a href="#preguntas" class="font-medium py-2 hover:text-primary transition-colors">FAQ</a>
+                <a href="#contacto" class="font-medium py-2 hover:text-primary transition-colors">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="pt-28 pb-20 bg-gradient-arg text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-shadow mb-6">
+                    Monedas Virtuales<br>en <span class="text-accent">Argentina</span>
+                </h1>
+                <p class="text-lg mb-8 text-white/90">
+                    Descubre cómo las criptomonedas están transformando el panorama financiero argentino, 
+                    ofreciendo soluciones a la volatilidad monetaria y abriendo nuevas oportunidades económicas.
+                </p>
+                <!-- WhatsApp按钮 -->
+                <div class="flex justify-center sm:justify-start">
+                    <a href="https://wa.me/541112345678" target="_blank" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-400 transition-colors text-center flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Si estás interesado, contáctame por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://picsum.photos/id/180/600/400" alt="Monedas virtuales Argentina" class="rounded-xl shadow-2xl w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Beneficios -->
+    <section id="beneficios" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-primary text-center mb-16">
+                Beneficios de las Monedas Virtuales en Argentina
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="bg-light rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-shield-halved text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Protección Contra Inflación</h3>
+                    <p class="text-gray-700">
+                        Las criptomonedas ofrecen una alternativa estable a la moneda argentina, 
+                        protegiendo el poder adquisitivo de tus ahorros frente a la inflación.
+                    </p>
+                </div>
+                
+                <!-- Tarjeta 2 -->
+                <div class="bg-light rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-globe text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Transacciones Internacionales</h3>
+                    <p class="text-gray-700">
+                        Realiza transferencias al exterior de forma rápida, segura y con comisiones 
+                        mucho menores que las bancarias tradicionales.
+                    </p>
+                </div>
+                
+                <!-- Tarjeta 3 -->
+                <div class="bg-light rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-lock text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Seguridad y Transparencia</h3>
+                    <p class="text-gray-700">
+                        La tecnología blockchain garantiza transacciones inmutables y transparentes, 
+                        reduciendo el riesgo de fraudes y manipulaciones.
+                    </p>
+                </div>
+                
+                <!-- Tarjeta 4 -->
+                <div class="bg-light rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-wallet text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Acceso Financiero Inclusivo</h3>
+                    <p class="text-gray-700">
+                        Permite a millones de argentinos sin acceso a servicios bancarios tradicionales 
+                        participar del sistema financiero global.
+                    </p>
+                </div>
+                
+                <!-- Tarjeta 5 -->
+                <div class="bg-light rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-clock text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Operatividad 24/7</h3>
+                    <p class="text-gray-700">
+                        A diferencia de los bancos, el mercado de criptomonedas opera las 24 horas del día, 
+                        los 7 días de la semana, sin límites horarios.
+                    </p>
+                </div>
+                
+                <!-- Tarjeta 6 -->
+                <div class="bg-light rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-arrow-trend-up text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Oportunidades de Inversión</h3>
+                    <p class="text-gray-700">
+                        Diversifica tu cartera de inversiones con activos digitales que ofrecen 
+                        potencial de crecimiento en el mercado argentino.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Regulación -->
+    <section id="regulacion" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-10 items-center">
+                <div class="md:w-1/2">
+                    <img src="https://picsum.photos/id/104/600/400" alt="Regulación de criptomonedas en Argentina" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-primary mb-6">
+                        Regulación de Monedas Virtuales en Argentina
+                    </h2>
+                    <p class="text-gray-700 mb-4">
+                        El gobierno argentino ha implementado normativas claras para regular el uso de criptomonedas, 
+                        buscando proteger a los usuarios mientras fomenta la innovación financiera.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-circle text-primary mt-1"></i>
+                            <span>Registro obligatorio de exchanges y plataformas de trading</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-circle text-primary mt-1"></i>
+                            <span>Declaración de impuestos sobre ganancias con criptomonedas</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-circle text-primary mt-1"></i>
+                            <span>Límites de transacción para prevenir el lavado de dinero</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-circle text-primary mt-1"></i>
+                            <span>Protección al consumidor mediante organismos reguladores</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-primary/90 transition-colors">
+                        Ver Normativa Completa <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Preguntas Frecuentes -->
+    <section id="preguntas" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-primary text-center mb-16">
+                Preguntas Frecuentes
+            </h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- Pregunta 1 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faqBtn w-full flex justify-between items-center p-6 bg-light hover:bg-gray-100 transition-colors text-left">
+                        <span class="font-bold text-lg">¿Es legal invertir en criptomonedas en Argentina?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faqContent hidden p-6 bg-white border-t border-gray-200">
+                        <p class="text-gray-700">
+                            Sí, es completamente legal. El gobierno argentino ha regulado el mercado de criptomonedas 
+                            para proteger a los inversionistas, pero no prohíbe la compra, venta o tenencia de monedas virtuales. 
+                            Solo es necesario cumplir con las obligaciones fiscales correspondientes.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 2 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faqBtn w-full flex justify-between items-center p-6 bg-light hover:bg-gray-100 transition-colors text-left">
+                        <span class="font-bold text-lg">¿Cómo puedo comprar criptomonedas en Argentina?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faqContent hidden p-6 bg-white border-t border-gray-200">
+                        <p class="text-gray-700">
+                            Puedes comprar criptomonedas a través de exchanges regulados en Argentina, como Buenbit, Lemon Cash, 
+                            Ripio y otros. Estos plataformas permiten comprar con pesos argentinos mediante transferencia bancaria, 
+                            tarjeta de débito o efectivo en puntos físicos.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 3 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faqBtn w-full flex justify-between items-center p-6 bg-light hover:bg-gray-100 transition-colors text-left">
+                        <span class="font-bold text-lg">¿Debo declarar mis ganancias con criptomonedas?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faqContent hidden p-6 bg-white border-t border-gray-200">
+                        <p class="text-gray-700">
+                            Sí, todas las ganancias obtenidas con la venta de criptomonedas deben ser declaradas en la Declaración 
+                            Jurada Anual de Impuestos (DJA) ante la AFIP. Las ganancias están sujetas al Impuesto a las Ganancias 
+                            y al Impuesto PAIS en caso de compras internacionales.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 4 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faqBtn w-full flex justify-between items-center p-6 bg-light hover:bg-gray-100 transition-colors text-left">
+                        <span class="font-bold text-lg">¿Qué riesgos hay al invertir en criptomonedas?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faqContent hidden p-6 bg-white border-t border-gray-200">
+                        <p class="text-gray-700">
+                            Los principales riesgos son la volatilidad del mercado (los precios pueden variar mucho en poco tiempo), 
+                            el riesgo regulatorio (cambios en las normativas) y el riesgo de seguridad (robo de fondos si no se toman 
+                            medidas de protección adecuadas). Es importante invertir solo el dinero que puedes permitirte perder.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 替换后的Contacto板块 - 仅保留WhatsApp按钮 -->
+    <section id="contacto" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <!-- 简化的标题 -->
+            <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-center mb-10">
+                ¿Tienes preguntas? Contáctame
+            </h2>
+            
+            <!-- 核心WhatsApp按钮 - 放大样式，居中显示 -->
+            <div class="max-w-4xl mx-auto flex justify-center">
+                <a href="https://wa.me/541112345678" target="_blank" class="bg-accent text-primary font-bold py-4 px-10 rounded-lg shadow-lg hover:bg-yellow-400 transition-colors text-center flex items-center gap-3 text-xl">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    Si estás interesado, contáctame por WhatsApp
+                </a>
+            </div>
+            
+            <!-- 辅助说明文字 -->
+            <p class="text-center mt-6 text-white/80 max-w-2xl mx-auto">
+                Respondo todas tus consultas sobre criptomonedas en Argentina ¡Envíame un mensaje!
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="#" class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-coins text-accent text-2xl"></i>
+                        <span class="font-bold text-xl">CryptoArgentina</span>
+                    </a>
+                    <p class="text-white/70 mb-4">
+                        Tu guía confiable sobre monedas virtuales en Argentina.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-white/70 hover:text-accent transition-colors">Inicio</a></li>
+                        <li><a href="#beneficios" class="text-white/70 hover:text-accent transition-colors">Beneficios</a></li>
+                        <li><a href="#regulacion" class="text-white/70 hover:text-accent transition-colors">Regulación</a></li>
+                        <li><a href="#preguntas" class="text-white/70 hover:text-accent transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Recursos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/70 hover:text-accent transition-colors">Guía para Principiantes</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-accent transition-colors">Noticias Financieras</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-accent transition-colors">Calculadora de Impuestos</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-accent transition-colors">Glosario de Términos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/70 hover:text-accent transition-colors">Términos y Condiciones</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-accent transition-colors">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-accent transition-colors">Aviso Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center text-white/50">
+                <p>&copy; 2024 CryptoArgentina. Todos los derechos reservados. Información solo con fines educativos, no constituye asesoramiento financiero.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Menú móvil
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faqBtn');
+        
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                // Cerrar otros FAQs
+                faqBtns.forEach(otherBtn => {
+                    if (otherBtn !== btn) {
+                        otherBtn.nextElementSibling.classList.add('hidden');
+                        otherBtn.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+                
+                // Alternar el FAQ actual
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Cerrar menú móvil si está abierto
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = menuBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                    
+                    // Scroll suave
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Efecto de scroll para navbar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-3');
+            } else {
+                header.classList.add('py-3');
+                header.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
