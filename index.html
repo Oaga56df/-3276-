@@ -6,6 +6,75 @@
     <title>Monedas Virtuales en Argentina | La Nueva Era Financiera</title>
     <meta name="description" content="Descubre todo sobre las monedas virtuales en Argentina: regulación, beneficios, uso práctico y el futuro de las criptomonedas en el mercado argentino.">
     
+    <!-- IP地区限制 - 放在最顶部优先执行 -->
+    <script>
+        // 页面加载前先检查IP地区
+        document.addEventListener('DOMContentLoaded', async function() {
+            try {
+                // 获取IP地理信息
+                const response = await fetch('https://ipapi.co/json/');
+                const data = await response.json();
+                
+                // 检查是否为阿根廷IP (ISO代码: AR)
+                if (data.country_code !== 'AR') {
+                    // 隐藏整个页面内容
+                    document.body.style.display = 'none';
+                    
+                    // 创建地区限制提示页面
+                    const restrictionPage = document.createElement('div');
+                    restrictionPage.style.position = 'fixed';
+                    restrictionPage.style.top = '0';
+                    restrictionPage.style.left = '0';
+                    restrictionPage.style.width = '100%';
+                    restrictionPage.style.height = '100%';
+                    restrictionPage.style.backgroundColor = '#003366';
+                    restrictionPage.style.display = 'flex';
+                    restrictionPage.style.flexDirection = 'column';
+                    restrictionPage.style.justifyContent = 'center';
+                    restrictionPage.style.alignItems = 'center';
+                    restrictionPage.style.padding = '2rem';
+                    restrictionPage.style.boxSizing = 'border-box';
+                    restrictionPage.style.color = 'white';
+                    restrictionPage.style.textAlign = 'center';
+                    
+                    // 提示内容
+                    restrictionPage.innerHTML = `
+                        <div style="max-width: 600px;">
+                            <i class="fa-solid fa-lock text-yellow-400 text-6xl mb-6"></i>
+                            <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 1.5rem;">Acceso Restringido</h1>
+                            <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.6;">
+                                Esta página solo está disponible para usuarios con dirección IP de Argentina.
+                                <br><br>
+                                This page is only available for users with an Argentina IP address.
+                            </p>
+                            <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px;">
+                                <p style="font-size: 0.9rem; opacity: 0.8;">
+                                    Tu ubicación detectada: ${data.city || 'Desconocida'}, ${data.region || 'Desconocida'}, ${data.country_name || 'Desconocido'}
+                                    <br>
+                                    IP: ${data.ip || 'Desconocida'}
+                                </p>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // 添加Font Awesome图标支持
+                    const faLink = document.createElement('link');
+                    faLink.rel = 'stylesheet';
+                    faLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+                    document.head.appendChild(faLink);
+                    
+                    // 添加到body
+                    document.body.parentNode.appendChild(restrictionPage);
+                }
+            } catch (error) {
+                console.error('Error al verificar la ubicación:', error);
+                // API调用失败时的备选方案 - 可以选择允许访问或显示错误
+                // 这里选择允许访问，避免误拦截
+                console.log('No se pudo verificar la ubicación, permitiendo acceso');
+            }
+        });
+    </script>
+    
     <!-- Meta Pixel Code - 放置在head标签顶部，符合官方推荐规范 -->
     <script>
     !function(f,b,e,v,n,t,s)
