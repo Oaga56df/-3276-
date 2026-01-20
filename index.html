@@ -107,9 +107,9 @@
                     Descubre cómo las criptomonedas están transformando el panorama financiero argentino, 
                     ofreciendo soluciones a la volatilidad monetaria y abriendo nuevas oportunidades económicas.
                 </p>
-                <!-- WhatsApp按钮 -->
+                <!-- WhatsApp按钮 - 添加ID用于事件追踪 -->
                 <div class="flex justify-center sm:justify-start">
-                    <a href="https://wa.me/541112345678" target="_blank" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-400 transition-colors text-center flex items-center gap-2">
+                    <a id="whatsappBtn1" href="https://wa.me/541112345678" target="_blank" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-400 transition-colors text-center flex items-center gap-2">
                         <i class="fa-brands fa-whatsapp"></i>
                         Si estás interesado, contáctame por WhatsApp
                     </a>
@@ -237,8 +237,8 @@
                             <span>Protección al consumidor mediante organismos reguladores</span>
                         </li>
                     </ul>
-                    <!-- 替换后的WhatsApp按钮 - 保留原样式，修改文本和链接 -->
-                    <a href="https://wa.me/541112345678" target="_blank" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-primary/90 transition-colors flex items-center gap-2">
+                    <!-- WhatsApp按钮 - 添加ID用于事件追踪 -->
+                    <a id="whatsappBtn2" href="https://wa.me/541112345678" target="_blank" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-primary/90 transition-colors flex items-center gap-2">
                         <i class="fa-brands fa-whatsapp"></i>
                         Si estás interesado, contáctame por WhatsApp
                     </a>
@@ -326,9 +326,9 @@
                 ¿Tienes preguntas? Contáctame
             </h2>
             
-            <!-- 核心WhatsApp按钮 - 放大样式，居中显示 -->
+            <!-- 核心WhatsApp按钮 - 添加ID用于事件追踪 -->
             <div class="max-w-4xl mx-auto flex justify-center">
-                <a href="https://wa.me/541112345678" target="_blank" class="bg-accent text-primary font-bold py-4 px-10 rounded-lg shadow-lg hover:bg-yellow-400 transition-colors text-center flex items-center gap-3 text-xl">
+                <a id="whatsappBtn3" href="https://wa.me/541112345678" target="_blank" class="bg-accent text-primary font-bold py-4 px-10 rounded-lg shadow-lg hover:bg-yellow-400 transition-colors text-center flex items-center gap-3 text-xl">
                     <i class="fa-brands fa-whatsapp text-2xl"></i>
                     Si estás interesado, contáctame por WhatsApp
                 </a>
@@ -468,6 +468,45 @@
                 header.classList.remove('py-2');
             }
         });
+
+        // ======== Facebook Pixel 事件追踪代码 ========
+        // 方法1: 为单个按钮添加事件（按ID）
+        document.getElementById('whatsappBtn1').addEventListener('click', function() {
+            // 触发Facebook标准Contact事件
+            fbq('track', 'Contact');
+            // 同时触发自定义事件，方便精准追踪
+            fbq('trackCustom', 'WhatsApp_Click', {
+                button_location: 'hero_section',
+                language: 'es',
+                country: 'Argentina'
+            });
+        }, false);
+
+        document.getElementById('whatsappBtn2').addEventListener('click', function() {
+            fbq('track', 'Contact');
+            fbq('trackCustom', 'WhatsApp_Click', {
+                button_location: 'regulation_section',
+                language: 'es',
+                country: 'Argentina'
+            });
+        }, false);
+
+        document.getElementById('whatsappBtn3').addEventListener('click', function() {
+            fbq('track', 'Contact');
+            fbq('trackCustom', 'WhatsApp_Click', {
+                button_location: 'contact_section',
+                language: 'es',
+                country: 'Argentina'
+            });
+        }, false);
+
+        // 方法2: 批量监听所有WhatsApp按钮（备选方案）
+        // document.querySelectorAll('a[href^="https://wa.me/"]').forEach(btn => {
+        //     btn.addEventListener('click', function() {
+        //         fbq('track', 'Contact');
+        //         fbq('trackCustom', 'WhatsApp_Click');
+        //     });
+        // });
     </script>
 </body>
 </html>
